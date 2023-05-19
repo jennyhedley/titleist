@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Titleist Pro V1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.dom.min.js"></script>
+    <script>
+let balls = [];
+let ballImgs = [
+  'https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Ball1.png?v=1683515038134',
+  'https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Ball2.png?v=1683515038778',
+  'https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Ball3.png?v=1683515039420',
+  'https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Ball4.png?v=1683515040073'
+];
+
+function preload() {
+  for (let i = 0; i < ballImgs.length; i++) {
+    ballImgs[i] = loadImage(ballImgs[i]);
+  }
+}
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  imageMode(CENTER);
+  angleMode(DEGREES);
+}
+
+function draw() {
+  clear();
+  for (let i = 0; i < balls.length; i++) {
+    let ball = balls[i];
+    ball.move();
+    ball.display();
+  }
+}
+
+function mousePressed() {
+  let ballImg = random(ballImgs);
+  let ballSize = 50;
+    if (balls.length % 5 === 4) {
+    ballSize *= 3;
+    } else if (balls.length % 4 === 3) {
+    ballSize *= 4;
+  } else if (balls.length % 3 === 2) {
+    ballSize *= 2;
+  }
+  let ball = new Ball(ballImg, ballSize);
+  balls.push(ball);
+}
+
+class Ball {
+  constructor(img, size) {
+    this.img = img;
+    this.x = mouseX;
+    this.y = mouseY;
+    this.speed = random(2, 5);
+    this.angle = random(0, 360);
+    this.size = size;
+  }
+
+  move() {
+    this.x += this.speed * cos(this.angle);
+    this.y += this.speed * sin(this.angle);
+    if (this.x < 0 || this.x > width || this.y < 0 || this.y > height) {
+      this.angle += 180;
+    }
+  }
+
+  display() {
+    push();
+    translate(this.x, this.y);
+    rotate(frameCount);
+    image(this.img, 0, 0, this.size, this.size);
+    pop();
+  }
+}
+    </script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="container">
+      <img
+        id="background-img"
+        src="https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/purbleBg.png?v=1683514966122"
+      />
+      <img
+        id="gif"
+        src="https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/golfGif.png?v=1683515019599"
+      />
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
