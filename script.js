@@ -2,15 +2,15 @@ const container = document.getElementById("container");
 const gif = document.getElementById("gif");
 
 const imageSources = [
-  "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza1.png?v=1683515864985",
-  "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza2.png?v=1683515584963",
-  "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza3.png?v=1683515586210",
-  "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza4.png?v=1683515587903",
-  "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza5.png?v=1683515588866",
+  "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza1.gif?v=1684490173091",
+  "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza2.gif?v=1684490457036",
+  "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza3.gif?v=1684490633309",
+  "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza4.gif?v=1684490864078",
+  "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza5.png?v=1684491171177",
   "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza6.png?v=1683515590083",
-  "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza7.png?v=1683515591047",
+  "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza7.gif?v=1684491101570",
   "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza8.png?v=1683515591962",
-  "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza9.png?v=1683515592875",
+  "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza9.gif?v=1684491369720",
   "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza10.png?v=1683515593794",
 ];
 
