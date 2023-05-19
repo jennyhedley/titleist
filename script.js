@@ -45,46 +45,46 @@ function positionPopupImgs() {
   //position first popup
   if (numOfPopups === 0) {
     popupImgX = (container.offsetWidth - popupImgs[0].width) / 3.5;
-    popupImgY = (container.offsetHeight - popupImgs[0].height) / 1.5;
+    popupImgY = (container.offsetHeight - popupImgs[0].height) / 3.5;
   } //position second popup
   else if (numOfPopups === 1) {
-    popupImgX = lastPopupImgBoundingRect.right - 100;
+    popupImgX = lastPopupImgBoundingRect.right -200;
     popupImgY = lastPopupImgBoundingRect.bottom - 100;
   }
   //position third popup
   else if (numOfPopups === 2) {
     popupImgX = lastPopupImgBoundingRect.right - 650;
-    popupImgY = lastPopupImgBoundingRect.top - 200;
+    popupImgY = lastPopupImgBoundingRect.top - 175;
   } //position fourth popup
   else if (numOfPopups === 3) {
-    popupImgX = lastPopupImgBoundingRect.right - 100;
-    popupImgY = lastPopupImgBoundingRect.top - 100;
+    popupImgX = lastPopupImgBoundingRect.right +200;
+    popupImgY = lastPopupImgBoundingRect.top + 300;
   }
   //position fifth popup
   else if (numOfPopups === 4) {
     popupImgX = lastPopupImgBoundingRect.right;
-    popupImgY = lastPopupImgBoundingRect.top;
+    popupImgY = lastPopupImgBoundingRect.top -100;
   } //position sixth popup
   else if (numOfPopups === 5) {
-    popupImgX = lastPopupImgBoundingRect.left +125;
-    popupImgY = lastPopupImgBoundingRect.bottom;
+    popupImgX = lastPopupImgBoundingRect.left + 125;
+    popupImgY = lastPopupImgBoundingRect.bottom +100;
   }
   //position seventh popup
   else if (numOfPopups === 6) {
-    popupImgX = lastPopupImgBoundingRect.left -275;
-    popupImgY = lastPopupImgBoundingRect.top -100;
+    popupImgX = lastPopupImgBoundingRect.left +525;
+    popupImgY = lastPopupImgBoundingRect.top +50;
   } //position eighth popup
   else if (numOfPopups === 7) {
-    popupImgX = lastPopupImgBoundingRect.left +100;
-    popupImgY = lastPopupImgBoundingRect.top -175;
+    popupImgX = lastPopupImgBoundingRect.left + 100;
+    popupImgY = lastPopupImgBoundingRect.top - 175;
   }
   //position ninth popup
   else if (numOfPopups === 8) {
-    popupImgX = lastPopupImgBoundingRect.right;
-    popupImgY = lastPopupImgBoundingRect.top -250;
+    popupImgX = lastPopupImgBoundingRect.right -200;
+    popupImgY = lastPopupImgBoundingRect.top;
   } else {
-    popupImgX = lastPopupImgBoundingRect.left;
-    popupImgY = lastPopupImgBoundingRect;
+    popupImgX = lastPopupImgBoundingRect.left -200;
+    popupImgY = lastPopupImgBoundingRect.top +100;
   }
 
   const popupImg = popupImgs[numOfPopups];
