@@ -17,6 +17,12 @@ const imageSources = [
    "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza11.png?v=1684493447021",
   "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza12.png?v=1684493555779",
    "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza11.png?v=1684493447021",
+  "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza12.png?v=1684493555779",
+    "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza12.png?v=1684493555779",
+   "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza11.png?v=1684493447021",
+  "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza12.png?v=1684493555779",
+    "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza12.png?v=1684493555779",
+   "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza11.png?v=1684493447021",
   "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza12.png?v=1684493555779"
   
 ];
