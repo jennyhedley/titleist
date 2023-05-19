@@ -48,7 +48,9 @@ function mousePressed() {
   } else if (balls.length % 3 === 2) {
     ballSize *= 2;
   } else if (balls.length % 2 === 1) {
-    ballSize *= 5;
+    ballSize *= 6;
+  } else if (balls.length % 11 === 1) {
+    ballSize *= 10;
   }
   let ball = new Ball(ballImg, ballSize);
   balls.push(ball);
