@@ -10,8 +10,11 @@ let balls = [];
 let ballImgs = [
   'https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Ball1.png?v=1683515038134',
   'https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Ball2.png?v=1683515038778',
-  'https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Ball3.png?v=1683515039420',
-  'https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Ball4.png?v=1683515040073'
+  'https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Ball4.png?v=1683515040073',
+  'https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Ball5.png?v=1684492217927',
+  'https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Ball6.png?v=1684492257895',
+  'https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Ball7.png?v=1684492288584',
+  'https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Ball8.png?v=1684492312920'
 ];
 
 function preload() {
@@ -44,6 +47,8 @@ function mousePressed() {
     ballSize *= 4;
   } else if (balls.length % 3 === 2) {
     ballSize *= 2;
+  } else if (balls.length % 2 === 1) {
+    ballSize *= 5;
   }
   let ball = new Ball(ballImg, ballSize);
   balls.push(ball);
