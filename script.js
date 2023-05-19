@@ -12,9 +12,19 @@ const imageSources = [
   "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza8.png?v=1683515591962",
   "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza9.gif?v=1684491369720",
   "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza10.png?v=1683515593794",
+  "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza11.png?v=1684493447021",
+  "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza12.png?v=1684493555779",
+   "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza11.png?v=1684493447021",
+  "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza12.png?v=1684493555779",
+   "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza11.png?v=1684493447021",
+  "https://cdn.glitch.global/727b2820-834a-4734-a47f-405787cb18d7/Stanza12.png?v=1684493555779"
+  
 ];
 
 const popupImgs = [];
+
+// Store the repeat popups separately
+const repeatPopups = popupImgs.slice(10);
 
 // Add popup images to the popupImgs array
 for (let i = 0; i < imageSources.length; i++) {
@@ -35,6 +45,14 @@ function positionPopupImgs() {
     (img) => img.parentElement === container
   ).length;
   if (numOfPopups >= 10) {
+        // Position the popups randomly
+    const popupImgX = Math.random() * (container.offsetWidth - popupImgs[0].width);
+    const popupImgY = Math.random() * (container.offsetHeight - popupImgs[0].height);
+
+    const popupImg = popupImgs[numOfPopups];
+    popupImg.style.left = `${popupImgX}px`;
+    popupImg.style.top = `${popupImgY}px`;
+    container.appendChild(popupImg);
     return;
   }
 
@@ -42,6 +60,7 @@ function positionPopupImgs() {
     popupImgs.find((img) => img.parentElement === container) || container;
   const lastPopupImgBoundingRect = lastPopupImg.getBoundingClientRect();
   let popupImgX, popupImgY;
+  
   //position first popup
   if (numOfPopups === 0) {
     popupImgX = (container.offsetWidth - popupImgs[0].width) / 3.5;
@@ -82,13 +101,16 @@ function positionPopupImgs() {
   else if (numOfPopups === 8) {
     popupImgX = lastPopupImgBoundingRect.right -200;
     popupImgY = lastPopupImgBoundingRect.top;
-  } else {
+    //position last stanza
+  } else if (numOfPopups === 9) {
     popupImgX = lastPopupImgBoundingRect.left -200;
     popupImgY = lastPopupImgBoundingRect.top +100;
+  } else {
+    return;
   }
-
-  const popupImg = popupImgs[numOfPopups];
+  
+    const popupImg = numOfPopups >= 10 ? repeatPopups[numOfPopups - 10] : popupImgs[numOfPopups];
   popupImg.style.left = `${popupImgX}px`;
   popupImg.style.top = `${popupImgY}px`;
   container.appendChild(popupImg);
-}
+  }
