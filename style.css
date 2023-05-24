@@ -28,11 +28,11 @@ canvas {
 }
 
 #gif {
-  width: 400px;
+  width: 500px;
   height: 500px;
   position: absolute;
   bottom: 300px;
-  left: 60px;
+  left: 10px;
 }
 
 .popup-img {
